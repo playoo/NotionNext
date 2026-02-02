@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Music Player</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+	</head>
+	<body>
+		<div id='aplayer'></div>
+		<script>
+			var ap = new APlayer({
+				element: document.getElementById('aplayer'),
+		    	          fixed: true,
+				audio: [{
+						author: '邓寓君(等什么君)',title: '飞花入梦',url: 'https://file.uhsea.com/2601/4692453396967ecdb0558e91f00f649dPL.flac',pic: 'https://file.uhsea.com/2601/4988490292b9da4e2b87e024942677d61P.jpg',
+                                      
+					},
+					{
+						title: '飞花入梦',
+						author: '邓寓君(等什么君)',
+						url: 'https://file.uhsea.com/2601/4692453396967ecdb0558e91f00f649dPL.flac',
+						pic: 'https://file.uhsea.com/2601/4988490292b9da4e2b87e024942677d61P.jpg',
+                                                       
+					},
+		                          {
+						title: '飞花入梦',
+						author: '邓寓君(等什么君)',
+						url: 'https://file.uhsea.com/2601/4692453396967ecdb0558e91f00f649dPL.flac',
+						pic: 'https://file.uhsea.com/2601/4988490292b9da4e2b87e024942677d61P.jpg',
+                                                       
+					},
+                                               {
+						title: '飞花入梦',
+						author: '邓寓君(等什么君)',
+						url: 'https://file.uhsea.com/2601/4692453396967ecdb0558e91f00f649dPL.flac',
+						pic: 'https://file.uhsea.com/2601/4988490292b9da4e2b87e024942677d61P.jpg',
+                                                          lrc: 'https://file.uhsea.com/2601/50e84de155a6385f4d4c7406247a6f91WF.lrc'
+					},
+				],
+			});
+			// 添加 按钮 按下的监听事件
+			document.addEventListener('keydown', function(e) {
+				// 上一首
+				if (e.code == 'ArrowLeft') {
+					ap.skipBack();
+				}
+				// 下一首
+				else if (e.code == 'ArrowRight') {
+					ap.skipForward();
+				}
+				// 播放/暂停
+				else if (e.code == 'Space') {
+					e.preventDefault(); // 防止空格键引起的页面滚动
+					if (ap.paused) {
+						ap.play();
+					} else {
+						ap.pause();
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
