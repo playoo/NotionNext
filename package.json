@@ -1,11 +1,11 @@
 {
   "name": "notion-next",
   "version": "4.6.0",
-  "homepage": "https://github.com/tangly1024/NotionNext.git",
+  "homepage": "https://github.com/playoo/NotionNext/NotionNext.git",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tangly1024/NotionNext.git"
+    "url": "https://github.com/playoo/NotionNext/NotionNext.git"
   },
   "author": {
     "name": "tangly",
@@ -65,7 +65,7 @@
     "axios": ">=0.21.1"
   },
   "bugs": {
-    "url": "https://github.com/tangly/NotionNext/issues",
-    "email": "tlyong1992@hotmail.com"
+    "url": "https://github.com/playoo/NotionNext/NotionNext/issues",
+    "email": "kan20008@hotmail.com"
   }
 }
